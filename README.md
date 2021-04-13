@@ -1,3 +1,7 @@
+# Demo Weather App
+
+![weatherGif](https://github.com/j0sephh123/Weather/blob/master/gif.gif?raw=true)
+
 # Start 
 `clone`    
 
