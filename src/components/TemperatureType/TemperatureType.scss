@@ -1,0 +1,11 @@
+.TemperatureType {
+  text-align: center;
+  padding: 1rem;
+  span {
+    font-size: 2rem;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

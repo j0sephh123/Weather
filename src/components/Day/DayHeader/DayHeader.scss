@@ -1,0 +1,20 @@
+.DayHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem;
+  .weekDay {
+    font-weight: 600;
+    color: #666;
+  }
+  .date {
+    font-weight: 400;
+    color: #aaa;
+  }
+  .DayHeaderRight {
+    display: flex;
+    flex-direction: column;
+    span {
+      font-weight: 600;
+    }
+  }
+}

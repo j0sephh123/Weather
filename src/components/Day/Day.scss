@@ -1,0 +1,24 @@
+.Day {
+  width: 30%;
+  background: #f9f9f9;
+  margin: 0.8rem;
+  &:hover {
+    background: #e0e0e0;
+    cursor: pointer;
+  }
+  &.active {
+    background: #d9f6ff;
+  }
+}
+
+@media (max-width: 1024px) {
+  .Day {
+    width: 45%;
+  }
+}
+
+@media (max-width: 720px) {
+  .Day {
+    width: 100%;
+  }
+}

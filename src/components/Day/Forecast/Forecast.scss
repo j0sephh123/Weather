@@ -1,0 +1,26 @@
+.Forecast {
+  padding: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  .forecastType {
+
+  }
+  .forecastImg {
+    background-color: white;
+    img {
+      width:4rem;
+    }
+  }
+  .tempBox {
+    .temp {
+      font-weight: 600;
+      font-size: 2rem;
+    }
+    .feelsLike {
+      font-size: 0.6rem;
+      color: gray;
+    }
+  }
+}

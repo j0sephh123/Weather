@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import {connect} from 'react-redux'
+import {useLoadWeatherData} from './hooks'
+import {Day, Loading, TemperatureType} from './components'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = ({ days, temperatureType, dispatch, activeDay }) => {
+	const isLoading = days.length === 0;
+
+	useLoadWeatherData(dispatch)
+
+	if (isLoading) return <Loading/>
+
+	return (
+		<div className="App">
+			<TemperatureType dispatch={dispatch} temperatureType={temperatureType} />
+			<div className="WeatherContainer">
+				{days.map((day, i) => <Day dispatch={dispatch} key={i} activeDay={activeDay} temperatureType={temperatureType} day={day} />)}
+			</div>
+		</div>
+	);
 }
 
-export default App;
+export default connect(({weather}) => weather, null)(App);
